@@ -3,9 +3,12 @@ from datetime import datetime
 from sgp4.api import Satrec
 from sgp4.api import jday
 
+from SATELLITES import SATELLITES
 from coordinate_system.EarhRotating import build_default_rotating_cs
 from XtoY.cartesianfromgeo import get_cartesian_geo_from_geo_angles
 from coordinate_system.earth_models import get_wgs_84
+
+
 
 # широта и долгота ЛК
 lk_coord = [55.930148, 37.518151]
@@ -20,7 +23,7 @@ s = '1 25544U 98067A   19343.69339541  .00001764  00000-0  38792-4 0  9991'
 t = '2 25544  51.6439 211.2001 0007417  17.6667  85.6398 15.50103472202482'
 satellite = Satrec.twoline2rv(s, t)
 
-jd, fr = jday(2020, 9, 9, 12, 00, 0)
+jd, fr = jday(2020, 9, 9, 14, 00, 0)
 
 # получаем векторы координат и скорости спутника в конкретный момент времени
 result = satellite.sgp4(jd, fr)

@@ -3,7 +3,7 @@
 """
 from typing import Union
 import numpy as np
-from .earth_models import EarthEllipsoidModel
+from coordinate_system.earth_models import EarthEllipsoidModel
 
 
 def get_cartesian_geo_from_geo_angles(

@@ -2,7 +2,6 @@
 from typing import Union
 import numpy as np
 
-import numpy as np
 
 Position1 = np.dtype("(3,)float")               # координаты в трёхмерном пространстве
 Position = np.ndarray                           # Position1

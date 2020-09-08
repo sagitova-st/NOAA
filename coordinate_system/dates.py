@@ -10,8 +10,8 @@ from .types import Epoch, EpochMulti
 SECONDS_PER_DAY = 24 * 3600
 
 JULIAN_CENTURY = 36525
-J2000_ERA_BEGIN = datetime.datetime(year=2000, month=1, day=1, hour=12, minute=0, second=0)
-J1986_ERA_BEGIN = datetime.datetime(year=1986, month=1, day=1, hour=12, minute=0, second=0)
+J2000_ERA_BEGIN = datetime.datetime(year=2000, month=1, day=1, hour=12, minute=0, second=0, tzinfo=datetime.timezone.utc)
+J1986_ERA_BEGIN = datetime.datetime(year=1986, month=1, day=1, hour=12, minute=0, second=0, tzinfo=datetime.timezone.utc)
 
 
 def epoch_to_jdn(epoch: Union[Epoch, np.ndarray]) -> Union[int, Sequence[int]]:

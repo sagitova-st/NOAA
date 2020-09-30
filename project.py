@@ -11,7 +11,7 @@ from XtoY.cartesianfromgeo import get_cartesian_geo_from_geo_angles
 from coordinate_system.earth_models import get_wgs_84
 
 
-pm.ecef2aer
+pm.geodetic2eci()
 # широта и долгота ЛК
 lk_coord = [55.930148, 37.518151]
 # print("Широта и долгота ЛК", lk_coord)
